@@ -1,60 +1,72 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Hiiiiii  Aainarziya</title>
+<title>Hiiiiii Aainarziya</title>
+
 <style>
-p {
-text-align: center;
-font-size: 32px;
-font-family: Candara, Oswald;
+body {
+  text-align: center;
+  font-family: Candara, Oswald;
 }
-img {
-display: block;
-margin: 0 auto;
-width: 25%;
+
+p {
+  font-size: 32px;
+}
+
+/* Image + buttons container */
+.image-box {
+  width: 25%;
+  margin: 0 auto;
+}
+
+/* Image */
+.image-box img {
+  width: 100%;
+}
+
+/* Buttons container */
+.buttons {
+  margin-top: 15px;
+}
+
+/* Buttons style */
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
 }
 </style>
 </head>
+
 <body>
-<p>CAN YOU UNBLOCK ME PLEASE  ?</p>
+
+<p>CAN YOU UNBLOCK ME PLEASE ?</p>
 <p>I promised you I don't call you but please Humble requesttt</p>
 <p>I didn't know why I doing this, Like I didn't understand whats this, but can we make good friend!!!</p>
-<img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif">
-</body>
-<title>Botões</title>
-<style>
-#botao1 {
-position: fixed;
-top: 70%;
-left: 55%;
-transform: translate(-50%, -50%);
-}
-#botao2 {
-position: absolute;
- left: 45%;
-  top: 80%;
-}
-</style>
-</head>
-<body>
-<button id="botao1">YES Aryan!</button>
-<button id="botao2">NO</button>
+
+<div class="image-box">
+  <img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif">
+
+  <div class="buttons">
+    <button id="botao1">YES Aryan!</button>
+    <button id="botao2">NO</button>
+  </div>
+</div>
+
 <script>
 const button2 = document.getElementById('botao2');
-let left = 40;
-button2.addEventListener('mouseover', function() {
-  if(left == 40){
-    left = 44;
-  }else{
-    left = 40;
-  }
-  this.style.left = left + '%';
+let move = false;
+
+button2.addEventListener('mouseover', () => {
+  button2.style.transform = move ? 'translateX(0px)' : 'translateX(80px)';
+  move = !move;
 });
 
-</script>
-<script>document.getElementById('botao1').addEventListener('click', function() {
-alert('YAYY THANK U :) Cutieeee❤️');
+document.getElementById('botao1').addEventListener('click', () => {
+  alert('YAYY THANK U :) Cutieeee❤️');
 });
 </script>
+
 </body>
 </html>
-
